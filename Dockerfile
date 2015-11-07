@@ -1,6 +1,6 @@
 FROM jupyter/datascience-notebook
 
-MAINTAINER Gaarv
+MAINTAINER Gaarv <@Gaarv1911>
 
 USER root
 
@@ -9,11 +9,14 @@ RUN apt-get update \
     curl \
   && rm -rf /var/lib/apt/lists/*
 
+# Env variable for conda
 ENV PATH $CONDA_DIR/bin:$PATH
 
-RUN pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git
-RUN pip install --upgrade --no-deps git+git://github.com/fchollet/keras.git
+# HDF5 package to save / load weights
 RUN conda install -y h5py
 
-RUN mkdir /notebooks
-WORKDIR /notebooks
+# Installs bleeding edge Theano
+RUN pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git
+
+# Installs bleeding edge Keras
+RUN pip install --upgrade --no-deps git+git://github.com/fchollet/keras.git
