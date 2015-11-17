@@ -10,7 +10,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 # Env variable for conda
-ENV PATH $CONDA_DIR/bin:$PATH
+ENV PATH=/opt/conda/bin:$PATH
 
 # HDF5 package to save / load weights
 RUN conda install -y h5py
