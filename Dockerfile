@@ -2,6 +2,9 @@ FROM jupyter/datascience-notebook
 
 MAINTAINER Gaarv <@Gaarv1911>
 
+# bash instead of dash to use source
+RUN ln -snf /bin/bash /bin/sh
+
 USER root
 
 RUN apt-get update \
