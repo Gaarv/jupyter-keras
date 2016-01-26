@@ -2,15 +2,12 @@ FROM jupyter/datascience-notebook
 
 MAINTAINER Gaarv <@Gaarv1911>
 
+USER root
+
 # bash instead of dash to use source
 RUN ln -snf /bin/bash /bin/sh
 
-USER root
-
-RUN apt-get update \
-  && apt-get install -y --no-install-recommends \
-    curl \
-  && rm -rf /var/lib/apt/lists/*
+USER jovyan
 
 # Env variable for conda
 ENV PATH=/opt/conda/bin:$PATH
