@@ -1,6 +1,6 @@
 # jupyter-keras
 
-##Info
+## Info
 Extended from [Jupyter Notebook Scientific Python Stack](https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook) which contains :
 
 * Jupyter Notebook 4.1.x
@@ -19,23 +19,18 @@ I use this image to work with neural networks, so I added the specific libraries
 * [HDF5 for Python](http://www.h5py.org/): optional dependency of Keras used to save / load weights for neural networks.
 
 
-##Basic Use
+## Basic Use
 
 ```
 docker run -d -v /<your notebook path>/:/home/jovyan/work -p 8888:8888 gaarv/jupyter-keras
-
 ```
-
 This will allow to have your notebook path mounted directly into the guest
 
 When using a terminal into jupyter, you can switch to Python2 with
-
 ```
 source activate python2
 ```
-
 and back to Python3 with
-
 ```
 source deactivate
 ```
