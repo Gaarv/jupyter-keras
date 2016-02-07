@@ -1,16 +1,41 @@
-# neural-python
+# jupyter-keras
 
-Extended from [Jupyter Datascience Notebook](https://github.com/jupyter/docker-stacks/tree/master/datascience-notebook) which contains :
+##Info
+Extended from [Jupyter Notebook Scientific Python Stack](https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook) which contains :
 
-* Jupyter Notebook 4.0.x
+* Jupyter Notebook 4.1.x
 * Conda Python 3.x and Python 2.7.x environments
-* pandas, matplotlib, scipy, seaborn, scikit-learn, ...
+* pandas, matplotlib, scipy, seaborn, scikit-learn, scikit-image, sympy, ...
 
 And much more, check the Jupyter Github for full reference and usage. Everything is pre-installed on both Python 3.x and 2.7.x environments.
 
+For advanced usage and options, read more at [Jupyter Notebook Scientific Python Stack](https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook).
 
-This image adds specifics libraries used in neural networks :
 
-* [Keras](http://keras.io/): a Theano-based Deep Learning library which allows for easy and fast prototyping. The main reason for this image.
-* [Theano](http://deeplearning.net/software/theano/): Theano is well known library for its power when used conjointly with NumPy. It makes also makes GPU usage easy.
+I use this image to work with neural networks, so I added the specific libraries :
+
+* [Keras](http://keras.io/):  a minimalist, highly modular neural networks library, written in Python and capable of running on top of either TensorFlow or Theano. It was developed with a focus on enabling fast experimentation.
+* [Theano](http://deeplearning.net/software/theano/): used as backend for Keras.
 * [HDF5 for Python](http://www.h5py.org/): optional dependency of Keras used to save / load weights for neural networks.
+
+
+##Basic Use
+
+```
+docker run -d -v /<your notebook path>/:/home/jovyan/work -p 8888:8888 gaarv/jupyter-keras
+
+```
+
+This will allow to have your notebook path mounted directly into the guest
+
+When using a terminal into jupyter, you can switch to Python2 with
+
+```
+source activate python2
+```
+
+and back to Python3 with
+
+```
+source deactivate
+```

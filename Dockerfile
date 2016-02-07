@@ -1,4 +1,4 @@
-FROM jupyter/datascience-notebook
+FROM jupyter/scipy-notebook
 
 MAINTAINER Gaarv <@Gaarv1911>
 
@@ -8,9 +8,6 @@ USER root
 RUN ln -snf /bin/bash /bin/sh
 
 USER jovyan
-
-# Env variable for conda
-ENV PATH=/opt/conda/bin:$PATH
 
 # Switch into Python2, installs bleeding edge Theano and Keras
 # HDF5 package to save / load weights
