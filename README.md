@@ -1,5 +1,7 @@
 # jupyter-keras
 
+[![](https://badge.imagelayers.io/gaarv/jupyter-keras:latest.svg)](https://imagelayers.io/?images=gaarv/jupyter-keras:latest 'Get your own badge on imagelayers.io')
+
 ## Info
 Extended from [Jupyter Notebook Scientific Python Stack](https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook) which contains :
 
