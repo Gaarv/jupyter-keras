@@ -1,7 +1,5 @@
 # jupyter-keras
 
-[![](https://badge.imagelayers.io/gaarv/jupyter-keras:latest.svg)](https://imagelayers.io/?images=gaarv/jupyter-keras:latest 'Get your own badge on imagelayers.io')
-
 ## Info
 Extended from [Jupyter Notebook Scientific Python Stack](https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook) which contains :
 
@@ -10,6 +8,8 @@ Extended from [Jupyter Notebook Scientific Python Stack](https://github.com/jupy
 * pandas, matplotlib, scipy, seaborn, scikit-learn, scikit-image, sympy, ...
 
 And much more, check the Jupyter Github for full reference and usage. Everything is pre-installed on both Python 3.x and 2.7.x environments.
+
+Image build is triggered with each update of [Jupyter Notebook Scientific Python Stack](https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook) and install bleeding edge versions of Keras and Theano at that time. Image size is 4Gb.
 
 For advanced usage and options, read more at [Jupyter Notebook Scientific Python Stack](https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook).
 
