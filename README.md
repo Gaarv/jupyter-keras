@@ -7,7 +7,7 @@ Extended from [Jupyter Notebook Scientific Python Stack](https://github.com/jupy
 * Anaconda Python 3.x
 * pandas, matplotlib, scipy, seaborn, scikit-learn, scikit-image, sympy, ...
 
-And much more, check the Jupyter Github for full reference and usage. Everything is pre-installed on both Python 3.x and 2.7.x environments.
+And much more, check the Jupyter Github for full reference and usage. Everything is pre-installed for Python 3.x.
 
 Image build is triggered with each update of [Jupyter Notebook Scientific Python Stack](https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook) and install bleeding edge versions of Keras.
 
